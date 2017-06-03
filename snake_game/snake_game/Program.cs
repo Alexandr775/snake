@@ -20,6 +20,7 @@ namespace snake_game
             VertPoints Vertpoints = new VertPoints(1, 18, 48, '+');
             horizPoints horizpointss = new horizPoints(2, 47, 1, '+');
             horizPoints horizpoints = new horizPoints(2, 47, 18, '+');
+
             Console.ReadLine();
         }
 
