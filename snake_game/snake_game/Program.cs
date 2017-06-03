@@ -10,8 +10,17 @@ namespace snake_game
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Привет мир");
+            draw(1,3,'*');
+            draw(1, 4, 's');
+            draw(2, 3, '#');
+            draw(2, 5, '@');
+            draw(3, 4, '&');
             Console.ReadLine();
+        }
+        static void draw(int x, int y, char sym)
+        {
+            Console.SetCursorPosition(x, y);
+            Console.Write(sym);
         }
     }
 }
