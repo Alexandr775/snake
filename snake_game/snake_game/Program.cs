@@ -16,7 +16,10 @@ namespace snake_game
             Point p2 = new Point(2,4,'#');
             p2.draw();
 
-            Console.WriteLine(p1.x + p2.x);
+            VertPoints Vertpointss = new VertPoints(1, 18, 1, '+');
+            VertPoints Vertpoints = new VertPoints(1, 18, 48, '+');
+            horizPoints horizpointss = new horizPoints(2, 47, 1, '+');
+            horizPoints horizpoints = new horizPoints(2, 47, 18, '+');
             Console.ReadLine();
         }
 
