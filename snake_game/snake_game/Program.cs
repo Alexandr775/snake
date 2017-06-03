@@ -10,18 +10,13 @@ namespace snake_game
     {
         static void Main(string[] args)
         {
-            Point p1=new Point();
-            p1.x=1;
-             p1.y=3;
-             p1.sym='*';
+            Point p1=new Point(1,3,'*');
              p1.draw();
 
-            Point p2 = new Point();
-            p2.x = 2;
-            p2.y = 4;
-            p2.sym = '*';
+            Point p2 = new Point(2,4,'#');
             p2.draw();
 
+            Console.WriteLine(p1.x + p2.x);
             Console.ReadLine();
         }
 
