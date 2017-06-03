@@ -10,17 +10,20 @@ namespace snake_game
     {
         static void Main(string[] args)
         {
-            draw(1,3,'*');
-            draw(1, 4, 's');
-            draw(2, 3, '#');
-            draw(2, 5, '@');
-            draw(3, 4, '&');
+            Point p1=new Point();
+            p1.x=1;
+             p1.y=3;
+             p1.sym='*';
+             p1.draw();
+
+            Point p2 = new Point();
+            p2.x = 2;
+            p2.y = 4;
+            p2.sym = '*';
+            p2.draw();
+
             Console.ReadLine();
         }
-        static void draw(int x, int y, char sym)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
-        }
+
     }
 }
