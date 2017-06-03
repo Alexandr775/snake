@@ -1,0 +1,7 @@
+C:\Users\comp\AppData\Local\Temporary Projects\snake_game\bin\Debug\snake_game.exe.config
+D:\Проекты\Змейка\snake_game\snake_game\bin\Debug\snake_game.exe.config
+D:\Проекты\Змейка\snake_game\snake_game\bin\Debug\snake_game.exe
+D:\Проекты\Змейка\snake_game\snake_game\bin\Debug\snake_game.pdb
+D:\Проекты\Змейка\snake_game\snake_game\obj\Debug\snake_game.csprojResolveAssemblyReference.cache
+D:\Проекты\Змейка\snake_game\snake_game\obj\Debug\snake_game.exe
+D:\Проекты\Змейка\snake_game\snake_game\obj\Debug\snake_game.pdb
