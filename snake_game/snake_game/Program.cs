@@ -10,8 +10,6 @@ namespace snake_game
     {
         static void Main(string[] args)
         {
-            Point p1=new Point(1,3,'*');
-             p1.draw();
 
             Point p2 = new Point(2,4,'#');
             p2.draw();
@@ -20,7 +18,10 @@ namespace snake_game
             VertPoints Vertpoints = new VertPoints(1, 18, 48, '+');
             horizPoints horizpointss = new horizPoints(2, 47, 1, '+');
             horizPoints horizpoints = new horizPoints(2, 47, 18, '+');
-
+            Vertpointss.draw();
+            Vertpoints.draw();
+            horizpointss.draw();
+            horizpoints.draw();
             Console.ReadLine();
         }
 
