@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace snake_game
 {
-    class VertPoints
+    class VertPoints:figura 
     {
-        List<Point> plist;
         public VertPoints(int yback, int ytop, int x, char sym)
         {
             plist = new List<Point>();
@@ -18,13 +17,7 @@ namespace snake_game
                 plist.Add(p);
             }
         }
-        public void draw()
-        {
-            foreach (Point p in plist) 
-            {
-                p.draw();
-            }
-        }
+
 
     }
 }

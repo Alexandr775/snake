@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace snake_game
 {
-    class horizPoints
+    class horizPoints: figura
     {
-        List<Point> plist;
         public horizPoints(int xleft, int xright,int y,char sym)
             {
             plist = new List<Point>();
@@ -18,13 +17,5 @@ namespace snake_game
                 plist.Add(p);
             }
             }
-        public void draw()
-        {
-            foreach (Point p in plist)
-            {
-                p.draw();
-            }
-        }
-
     }
 }
