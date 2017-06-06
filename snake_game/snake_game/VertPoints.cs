@@ -20,9 +20,9 @@ namespace snake_game
         }
         public void draw()
         {
-            foreach (Point p in plist);
+            foreach (Point p in plist) 
             {
-                p.Draw();
+                p.draw();
             }
         }
 
