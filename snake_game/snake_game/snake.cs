@@ -8,15 +8,37 @@ namespace snake_game
 {
     class snake : figura
     {
-        public snake(Point tail, int width, direction direction)
+        direction Direction;
+        public snake(Point tail, int width, direction _direction)
             {
+            Direction = _direction;
             plist = new List<Point>();
             for (int i = 0; i < width; i++)
             {
                 Point p = new Point(tail);
-                p.move(i, direction);
+                p.move(i, Direction);
                 plist.Add(p);
             }
             }
+
+        internal void Move()
+        {
+            Point tail = plist.First(); //
+            plist.Remove(tail); //
+            Point head = GNP(); //
+                plist.Add(head); //
+
+            tail.Clear(); //
+            head.draw(); //
+        }
+
+        public Point GNP()
+        {
+            Point head = plist.Last(); //присваивает этой точке значение последней точки 
+            Point nextPoint = new Point(head); //
+            nextPoint.move(1, Direction); //
+            return nextPoint; //
+        }
+
     }
 }

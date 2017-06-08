@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace snake_game
@@ -10,11 +11,6 @@ namespace snake_game
     {
         static void Main(string[] args)
         {
-            Console.SetBufferSize(80, 25);
-            Point p = new Point(2,5,'*');
-            snake Snake = new snake(p, 5, direction.RIGHT);
-            Snake.draw();
-
             VertPoints Vertpointss = new VertPoints(0, 24, 0, '#');
             VertPoints Vertpoints = new VertPoints(0, 24, 78, '#');
             horizPoints horizpointss = new horizPoints(0, 78, 0, '#');
@@ -23,6 +19,19 @@ namespace snake_game
             Vertpoints.draw();
             horizpointss.draw();
             horizpoints.draw();
+
+            Console.SetBufferSize(80, 25);
+            Point p = new Point(2,5,'*');
+            snake Snake = new snake(p, 5, direction.RIGHT);
+            Snake.draw();
+            Snake.Move();
+            Thread.Sleep(300);
+            Snake.Move();
+            Thread.Sleep(300);
+            Snake.Move();
+            Thread.Sleep(300);
+            Snake.Move();
+            Thread.Sleep(300);
             Console.ReadLine();
         }
 
