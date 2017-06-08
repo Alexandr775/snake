@@ -50,6 +50,20 @@ namespace snake_game
             else if (key == ConsoleKey.DownArrow)
                 Direction = direction.DOWN;
         }
+        internal bool Eat(Point food)
+        {
+            Point head = GNP();
+            if (head.IsHit(food))
+            {
+                food.sym = head.sym;
+                plist.Add(food);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
 
     }

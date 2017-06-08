@@ -22,9 +22,20 @@ namespace snake_game
 
             Console.SetBufferSize(80, 25);
             Point p = new Point(2,5,'*');
-            snake Snake = new snake(p, 5, direction.RIGHT);
+            snake Snake = new snake(p, 4, direction.RIGHT);
+            Snake.draw();
+
+            Foodcreator foodcreator = new Foodcreator(80, 25, '$');
+            Point food = foodcreator.Createfood();
+            food.draw();
+
             while (true)
             {
+                if (Snake.Eat(food))
+                {
+                    food = foodcreator.Createfood();
+                    food.draw();
+                }
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
