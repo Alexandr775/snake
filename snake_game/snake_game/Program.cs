@@ -23,16 +23,17 @@ namespace snake_game
             Console.SetBufferSize(80, 25);
             Point p = new Point(2,5,'*');
             snake Snake = new snake(p, 5, direction.RIGHT);
-            Snake.draw();
-            Snake.Move();
-            Thread.Sleep(300);
-            Snake.Move();
-            Thread.Sleep(300);
-            Snake.Move();
-            Thread.Sleep(300);
-            Snake.Move();
-            Thread.Sleep(300);
-            Console.ReadLine();
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    Snake.handlekey(key.Key);
+                }
+                Thread.Sleep(100);
+                Snake.Move();
+            }
+
         }
 
     }

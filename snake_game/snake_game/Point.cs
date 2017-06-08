@@ -37,11 +37,11 @@ namespace snake_game
             }
             else if (Direction == direction.UP)
             {
-                y = y + offset;
+                y = y - offset;
             }
             else if (Direction == direction.DOWN)
             {
-                y = y - offset;
+                y = y + offset;
             }
         }
         public void draw()
