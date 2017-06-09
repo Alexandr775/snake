@@ -11,16 +11,13 @@ namespace snake_game
     {
         static void Main(string[] args)
         {
-            VertPoints Vertpointss = new VertPoints(0, 24, 0, '#');
-            VertPoints Vertpoints = new VertPoints(0, 24, 78, '#');
-            horizPoints horizpointss = new horizPoints(0, 78, 0, '#');
-            horizPoints horizpoints = new horizPoints(0, 78, 24, '#');
-            Vertpointss.draw();
-            Vertpoints.draw();
-            horizpointss.draw();
-            horizpoints.draw();
+
 
             Console.SetBufferSize(80, 25);
+
+            Walls walls = new Walls(80, 25);
+            walls.Draw();
+
             Point p = new Point(2,5,'*');
             snake Snake = new snake(p, 4, direction.RIGHT);
             Snake.draw();
@@ -31,6 +28,10 @@ namespace snake_game
 
             while (true)
             {
+                if (walls.IsHit(Snake) || Snake.IsHitTail())
+                {
+                    break;
+                }
                 if (Snake.Eat(food))
                 {
                     food = foodcreator.Createfood();
